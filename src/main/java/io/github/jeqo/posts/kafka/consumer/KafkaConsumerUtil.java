@@ -16,7 +16,7 @@ public class KafkaConsumerUtil {
     static KafkaConsumer createConsumer(){
         Configuration config = ConfigurationProvider.getConfiguration();
 
-        String bootstrapServers = config.getOrDefault("kafka.bootstrap_servers", "localhost:9092");
+        String bootstrapServers = config.getOrDefault("kafka.bootstrap_servers", "192.168.99.101:9092");
 
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);

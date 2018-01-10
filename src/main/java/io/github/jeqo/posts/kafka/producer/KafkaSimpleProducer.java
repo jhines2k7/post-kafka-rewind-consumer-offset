@@ -22,7 +22,7 @@ public class KafkaSimpleProducer {
     public static void main(String[] args) {
         Configuration config = ConfigurationProvider.getConfiguration();
 
-        String bootstrapServers = config.getOrDefault("kafka.bootstrap_servers", "localhost:9092");
+        String bootstrapServers = config.getOrDefault("kafka.bootstrap_servers", "192.168.99.101:9092");
 
         Properties properties = new Properties();
         properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
